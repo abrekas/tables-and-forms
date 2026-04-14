@@ -11,7 +11,31 @@
 
     <!--Форму размещай тут-->
     <form action="/pets/orders" method="post">
-        <button type="submit">Отправить</button>
+        <label>
+            Ваш питомец
+            <select name="petType">
+                <option value="dog" selected>Собака</option>
+                <option value="cat">Кот</option>
+                <option value="tiger" selected>Тигр</option>
+            </select>
+        </label><br>
+        <label>
+            Пол
+            <select name="gender">
+                <option value="boy" selected>Мальчик</option>
+                <option value="girl">Девочка</option>
+                <option value="none" selected>Атакующий вертолёт</option>
+            </select>
+        </label><br>
+        <label>Цвет глаз <input required name="eyeColor" type="color"></label><br>
+        <label>Длина хвоста <input required name="tailLength" type="number" min="7" max="120" placeholder="52"></label><br>
+        <label>Имя хозяина<input required name="name" type="text" minlength="3" maxlength="50" placeholder="donald"></label><br>
+        <label>Дата рождения <input required name="dateOfBirth" type="date"></label><br>
+        <label>Электронная почта <input required name="email" type="email" placeholder="должно содержать @"></label><br>
+        <label>Номер телефона <input required name="phone" type="tel" placeholder="8 800 555 35 35"></label><br>
+        <label>Согласен с правилами <input required name="rules" type="checkbox" checked value="true"></label><br>
+        <label><button type="reset">Сбросить ответы</button></label><br>
+        <label><button type="submit">Отправить</button></label>
     </form>
 
 </main>
